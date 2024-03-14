@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Projeto3.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- FOLHA DE ESTILO DO PROJETO -->
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/Projeto.css" rel="stylesheet" />
+    <!-- BIBLIOTECAS PARA EXIBIR SLIDE -->
+    <link href="Js/flexslider.css" rel="stylesheet" />
+    <script src="Js/jquery-1.7.2.min.js"></script>
+    <script src="Js/flexslider.min.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- CABEÇALHO -->
+        <div class="cabecalho content-wrap">
+            <!-- LOGOMARCA -->
+            <div class="logomarca">
+                <img src="Images/marca.png" />
+            </div>
+
+            <!-- BARRA DE TÍTULO -->
+            <div class="barra-titulo">
+            </div>
+
+            <!-- BARRA MENU -->
+            <div class="barra-menu">
+                <a href="Default.aspx">HOME</a>
+                <a title="fale conosco" href="FaleConosco.aspx">
+                    <img width="40" src="Images/icon_faleconosco.png" /></a>
+            </div>
+        </div>
+
+        <!-- LOCAL PARA AS PÁGINAS DE CONTEÚDO -->
+        <div class="conteudo content-wrap">
+            <asp:ContentPlaceHolder ID="Conteudo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="rodape">
+        </div>
+    </form>
+</body>
+</html>
