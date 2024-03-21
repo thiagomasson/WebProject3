@@ -11,7 +11,7 @@ namespace Projeto3
 {
 
 
-    public partial class FaleConosco
+    public partial class Cadastro
     {
 
         /// <summary>
@@ -51,15 +51,6 @@ namespace Projeto3
         protected global::System.Web.UI.WebControls.TextBox txtTelefone;
 
         /// <summary>
-        /// Controle txtMensagem.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMensagem;
-
-        /// <summary>
         /// Controle btnEnviar.
         /// </summary>
         /// <remarks>
@@ -67,5 +58,14 @@ namespace Projeto3
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEnviar;
+
+        /// <summary>
+        /// Controle lblDados.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDados;
     }
 }

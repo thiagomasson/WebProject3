@@ -136,8 +136,16 @@ hr {
     margin-top: 120px;
 }
 
-.text-align-right{
+.margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.text-align-right {
     text-align:right;
+}
+
+.min-height-400 {
+    min-height: 400px;
 }
 
 

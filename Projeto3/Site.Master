@@ -33,7 +33,8 @@
             <!-- BARRA MENU -->
             <div class="barra-menu">
                 <a href="Default.aspx">HOME</a>
-                <a title="fale conosco" href="FaleConosco.aspx">
+                <a href="Cadastro.aspx">CADASTRO</a>
+                <a title="Fale Conosco" href="FaleConosco.aspx">
                     <img width="40" src="Images/icon_faleconosco.png" /></a>
             </div>
         </div>
