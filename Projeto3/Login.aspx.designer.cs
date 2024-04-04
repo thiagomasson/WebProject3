@@ -11,43 +11,43 @@ namespace Projeto3
 {
 
 
-    public partial class Site
+    public partial class Login
     {
 
         /// <summary>
-        /// Controle head.
+        /// Controle txtMsg.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label txtMsg;
 
         /// <summary>
-        /// Controle form1.
+        /// Controle txtNomeAcesso.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeAcesso;
 
         /// <summary>
-        /// Controle ExPing.
+        /// Controle txtSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor ExPing;
+        protected global::System.Web.UI.WebControls.TextBox txtSenha;
 
         /// <summary>
-        /// Controle Conteudo.
+        /// Controle btnEntrar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Conteudo;
+        protected global::System.Web.UI.WebControls.Button btnEntrar;
     }
 }

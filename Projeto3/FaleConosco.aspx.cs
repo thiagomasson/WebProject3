@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Net.Mail;
 
 namespace Projeto3
 {
@@ -35,12 +31,44 @@ namespace Projeto3
             }
             else
             {
-                txtNome.Text = "";
-                txtEmail.Text = "";
-                txtTelefone.Text = "";
-                txtMensagem.Text = "";
-                lblMensagem.Text = "Mensagem enviada!";
-                lblMensagem.ForeColor = Color.Green;
+                try
+                {
+                    // Criar uma instancia da Classe System.Net.Mail.MailMessage()
+
+                    MailMessage mail = new MailMessage();
+                    mail.To.Add("contato@seudominio.com.br");
+                    MailAddress from = new MailAddress("contato@seudominio.com.br");
+                    mail.From = from;
+                    mail.Subject = "Enviado pelo Fale Conosco";
+
+                    mail.Body = "Nome: " + txtNome.Text + "\n";
+                    mail.Body += "Email: " + txtEmail.Text + "\n";
+                    mail.Body += "Telefone: " + txtTelefone.Text + "\n";
+                    mail.Body += "Mensagem: " + txtMensagem.Text + "\n";
+
+                    mail.IsBodyHtml = false;
+
+                    // Cria uma instância da clase SMTPClient()
+                    SmtpClient smtp = new SmtpClient
+                    {
+                        Host = "seudominio.com.br",
+                        Credentials = new System.Net.NetworkCredential("contato@seudominio.com.br", "suasenha")
+                    };
+                    smtp.Send(mail);
+
+                    Formulario.Visible = false;
+                    lblAlerta.Text = "Seu e-mail foi envido com sucesso";
+                    lblAlerta.ForeColor = Color.Green;
+                } 
+                catch (Exception ex)
+                {
+                    lblAlerta.Text = "Houve uma falha ao enviar o e-mail. Tente novamente mais tarde :)";
+
+                    //  Grave em um arquivo de texto denominado "Excecoes.txt" os dados recuperados em "ex.StackTrace"
+
+                    System.IO.File.AppendAllText(Server.MapPath("~/Excecoes.txt"), ex.StackTrace);
+
+                }
             }
         }
     }

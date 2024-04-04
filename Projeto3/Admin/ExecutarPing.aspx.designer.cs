@@ -11,43 +11,34 @@ namespace Projeto3
 {
 
 
-    public partial class Site
+    public partial class ExecutarPing
     {
 
         /// <summary>
-        /// Controle head.
+        /// Controle txtEndereco.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox txtEndereco;
 
         /// <summary>
-        /// Controle form1.
+        /// Controle btnEnviar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button btnEnviar;
 
         /// <summary>
-        /// Controle ExPing.
+        /// Controle lblResultado.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor ExPing;
-
-        /// <summary>
-        /// Controle Conteudo.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Conteudo;
+        protected global::System.Web.UI.WebControls.Label lblResultado;
     }
 }

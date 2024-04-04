@@ -15,6 +15,24 @@ namespace Projeto3
     {
 
         /// <summary>
+        /// Controle lblAlerta.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
+
+        /// <summary>
+        /// Controle Formulario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Formulario;
+
+        /// <summary>
         /// Controle lblMensagem.
         /// </summary>
         /// <remarks>

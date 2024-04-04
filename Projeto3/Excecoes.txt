@@ -1,0 +1,5 @@
+   em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   em System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   em System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   em System.Net.Mail.SmtpClient.Send(MailMessage message)
+   em Projeto3.FaleConosco.btnEnviar_Click(Object sender, EventArgs e) na C:\Users\0040972211014\Downloads\Solução3\Projeto3\FaleConosco.aspx.cs:linha 57

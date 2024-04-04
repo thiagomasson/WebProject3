@@ -23,7 +23,7 @@
         <div class="cabecalho content-wrap">
             <!-- LOGOMARCA -->
             <div class="logomarca">
-                <img src="Images/marca.png" />
+                <img src="../Images/marca.png" />
             </div>
 
             <!-- BARRA DE TÍTULO -->
@@ -32,10 +32,13 @@
 
             <!-- BARRA MENU -->
             <div class="barra-menu">
-                <a href="Default.aspx">HOME</a>
-                <a href="Cadastro.aspx">CADASTRO</a>
-                <a title="Fale Conosco" href="FaleConosco.aspx">
-                    <img width="40" src="Images/icon_faleconosco.png" /></a>
+                <a href="../Default.aspx">HOME</a>
+                <a href="../Login.aspx">LOGIN</a>
+                <a href="../Cadastro.aspx">CADASTRO</a>
+                <a id="ExPing" runat="server" href="~/Admin/ExecutarPing.aspx">PING</a>
+                <a href="../Logout.aspx">SAIR</a>
+                <a title="Fale Conosco" href="../FaleConosco.aspx">
+                    <img width="40" src="../Images/icon_faleconosco.png" /></a>
             </div>
         </div>
 
