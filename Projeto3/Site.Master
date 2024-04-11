@@ -33,10 +33,12 @@
             <!-- BARRA MENU -->
             <div class="barra-menu">
                 <a href="../Default.aspx">HOME</a>
-                <a href="../Login.aspx">LOGIN</a>
                 <a href="../Cadastro.aspx">CADASTRO</a>
-                <a id="ExPing" runat="server" href="~/Admin/ExecutarPing.aspx">PING</a>
-                <a href="../Logout.aspx">SAIR</a>
+                <a id="ExPing" visible="false" runat="server" href="~/Admin/ExecutarPing.aspx">PING</a>
+                <a id="ExExcecoes" visible="false" runat="server" href="~/Admin/ExibeExcecoes.aspx">EXCEÇÕES</a>
+                <asp:HyperLink NavigateUrl="~/Login.aspx" ID="lnkEntrar" Visible="true" runat="server">ENTRAR</asp:HyperLink>
+                <asp:HyperLink NavigateUrl="~/Logout.aspx" ID="lnkSair" Visible="false" runat="server">SAIR</asp:HyperLink>
+
                 <a title="Fale Conosco" href="../FaleConosco.aspx">
                     <img width="40" src="../Images/icon_faleconosco.png" /></a>
             </div>
