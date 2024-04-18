@@ -66,7 +66,12 @@ namespace Projeto3
 
                     //  Grave em um arquivo de texto denominado "Excecoes.txt" os dados recuperados em "ex.StackTrace"
 
-                    System.IO.File.AppendAllText(Server.MapPath("~/Excecoes.txt"), ex.StackTrace);
+                    string conteudo = DateTime.Now
+                        + "\n" + ex.Message 
+                        + "\n" + ex.StackTrace
+                        + "\n----------------------------------\n";
+
+                    System.IO.File.AppendAllText(Server.MapPath("~/Excecoes.txt"), conteudo);
 
                 }
             }

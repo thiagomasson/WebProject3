@@ -4,8 +4,10 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Permite que as páginas sejam redimencionadas para diferentes larguras de monitor-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <!-- FOLHA DE ESTILO DO PROJETO -->

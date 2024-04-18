@@ -6,7 +6,7 @@
     <div class="margin-top-60">
 
         <div class="box margin-right-20">
-            <h1>Exibir Exceções</h1>
+            <h1>Exceções</h1>
             <br />
             <asp:Label ID="lblExcecoes" runat="server" Text="Label"></asp:Label>
         </div>
