@@ -52,7 +52,7 @@
         <!-- Coluna 2 -->
         <div class="col-3">
             <div class="box border margin-right-20">
-                COLUNA2
+                <asp:Button ID="btnInserir" OnClick="btnInserir_Click" runat="server" Text="Inserir" />
             </div>
         </div>
         <!-- Coluna 3 -->
