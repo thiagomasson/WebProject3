@@ -25,7 +25,7 @@
         <div class="cabecalho content-wrap">
             <!-- LOGOMARCA -->
             <div class="logomarca">
-                <img src="../Images/marca.png" />
+                <a href="../Default.aspx"><img src="../Images/marca.png" /></a>
             </div>
 
             <!-- BARRA DE TÍTULO -->
@@ -36,6 +36,7 @@
             <div class="barra-menu">
                 <a href="../Default.aspx">HOME</a>
                 <a href="../Cadastro.aspx">CADASTRO</a>
+                <asp:HyperLink NavigateUrl="~/Admin/ExibirUsuarios.aspx" ID="lnkUsuarios" Visible="false" runat="server">USUÁRIOS</asp:HyperLink>
                 <a id="ExPing" visible="false" runat="server" href="~/Admin/ExecutarPing.aspx">PING</a>
                 <a id="ExExcecoes" visible="false" runat="server" href="~/Admin/ExibeExcecoes.aspx">EXCEÇÕES</a>
                 <asp:HyperLink NavigateUrl="~/Login.aspx" ID="lnkEntrar" Visible="true" runat="server">ENTRAR</asp:HyperLink>

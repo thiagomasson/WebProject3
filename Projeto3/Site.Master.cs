@@ -9,7 +9,7 @@ namespace Projeto3
         {
             bool autenticado = Session["autenticado"] != null;
 
-            ExPing.Visible = ExExcecoes.Visible = lnkSair.Visible = autenticado;
+            ExPing.Visible = ExExcecoes.Visible = lnkSair.Visible = lnkUsuarios.Visible = autenticado;
             lnkEntrar.Visible = !autenticado;
         }
     }

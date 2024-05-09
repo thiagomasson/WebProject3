@@ -73,7 +73,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\CadastroUsuario.aspx" />
     <Content Include="Admin\ExibeExcecoes.aspx" />
+    <Content Include="Admin\ExibirUsuarios.aspx" />
     <Content Include="App_Data\BancoDeDados.accdb" />
     <Content Include="Cadastro.aspx" />
     <Content Include="cadastro.txt" />
@@ -116,12 +118,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\CadastroUsuario.aspx.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CadastroUsuario.aspx.designer.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ExibeExcecoes.aspx.cs">
       <DependentUpon>ExibeExcecoes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ExibeExcecoes.aspx.designer.cs">
       <DependentUpon>ExibeExcecoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ExibirUsuarios.aspx.cs">
+      <DependentUpon>ExibirUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ExibirUsuarios.aspx.designer.cs">
+      <DependentUpon>ExibirUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cadastro.aspx.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
