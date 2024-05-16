@@ -3,11 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Conteudo" runat="server">
     <div class="row margin-top-60">
-        <div class="col-3">
+        <div class="col-6">
             <div class="box border">
                 <h2>Usuário</h2>
                 <br />
                 <asp:Label ID="lblAlerta" ForeColor="Red" runat="server"></asp:Label>
+                <br />
                 <asp:Label ID="lblUsuarioID" Font-Size="20px" runat="server"></asp:Label>
                 <br />
                 <label>Nome</label>

@@ -3,7 +3,6 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Projeto3.Admin
 {
@@ -14,21 +13,17 @@ namespace Projeto3.Admin
             if (!IsPostBack && Request.QueryString.HasKeys())
             {
                 lblUsuarioID.Text = Request.QueryString["key"].ToString();
-                LerUsuario();
+
+                if (int.TryParse(lblUsuarioID.Text, out int idUsuario))
+                    LerUsuario(idUsuario);
             }
         }
 
-        protected void LerUsuario()
+        protected void LerUsuario(int idUsuario)
         {
-            DAO db = new DAO();
-            db.DataProviderName = DAO.ProviderName.OleDb;
-            string conexao = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("~/App_Data/BancoDeDados.accdb") + ";Persist Security Info=False;";
-            db.ConnectionString = conexao;
+            string comandoSQL = $"SELECT * FROM Usuarios WHERE UsuarioID={idUsuario}";
+            DataTable tb = ConsultaSQL(comandoSQL);
 
-            string comandoSQL = $"SELECT * FROM Usuarios WHERE UsuarioID={lblUsuarioID.Text}";
-            DataTable tb = new DataTable();
-            tb = (DataTable)db.Query(comandoSQL);
-            
             txtNome.Text = tb.Rows[0]["Nome"].ToString();
             txtEmail.Text = tb.Rows[0]["Email"].ToString();
             txtNomeAcesso.Text = tb.Rows[0]["NomeAcesso"].ToString();
@@ -39,6 +34,7 @@ namespace Projeto3.Admin
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             lblAlerta.ForeColor = Color.Red;
+            
             if (txtNome.Text.Trim() == "")
             {
                 lblAlerta.Text = "Digite o nome";
@@ -52,6 +48,11 @@ namespace Projeto3.Admin
             else if (txtNomeAcesso.Text.Trim() == "")
             {
                 lblAlerta.Text = "Digite o nome de acesso";
+                txtNomeAcesso.Focus();
+            }
+            else if (!NomeDeAcessoValido(txtNomeAcesso.Text.Trim()))
+            {
+                lblAlerta.Text = "Nome de acesso inválido ou já existente";
                 txtNomeAcesso.Focus();
             }
             else if (txtSenha.Text.Trim() == "")
@@ -79,6 +80,24 @@ namespace Projeto3.Admin
                 db.Query(comandoSQL);
                 Response.Redirect("ExibirUsuarios.aspx");
             }
+        }
+
+        protected bool NomeDeAcessoValido(string nomeDeAcesso)
+        {
+            string comandoSQL = $"SELECT NomeAcesso, UsuarioID FROM Usuarios WHERE NomeAcesso='{nomeDeAcesso}';";
+            DataTable dt = ConsultaSQL(comandoSQL);
+
+            return dt.Rows.Count <= 0 || dt.Rows[0]["UsuarioID"].ToString() == lblUsuarioID.Text;
+        }
+
+        protected DataTable ConsultaSQL(string query)
+        {
+            DAO db = new DAO();
+            db.DataProviderName = DAO.ProviderName.OleDb;
+            string conexao = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("~/App_Data/BancoDeDados.accdb") + ";Persist Security Info=False;";
+            db.ConnectionString = conexao;
+  
+            return (DataTable)db.Query(query);
         }
     }
 }

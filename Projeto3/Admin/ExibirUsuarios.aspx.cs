@@ -1,7 +1,6 @@
 ﻿using Datapost.DB;
 using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Projeto3.Admin
 {
@@ -24,7 +23,7 @@ namespace Projeto3.Admin
 
         protected void btnInserir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CadastroUsuario.aspx?key=");
+            Response.Redirect("CadastroUsuario.aspx");
         }
 
         protected void btnFechar_Click(object sender, EventArgs e)
